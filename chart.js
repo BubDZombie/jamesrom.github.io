@@ -24,6 +24,7 @@ var Chart = (function() {
 	var axisScale = d3.scale.linear()
 		.domain([0, 1])
 		.range([8, self.width() + 4]);
+
 	var yScale = d3.scale.linear()
 		.domain([60, 0])
 		.range([self.height(), 0]);
@@ -82,6 +83,7 @@ var Chart = (function() {
 		Stats.resets = clicks.length;
 
 		xScale.domain([scrollLvl, clicks.length+1-zoomLvl+scrollLvl]);
+		//xScale.domain(['one', 'two', 'three']);
 		axisScale.domain([scrollLvl, clicks.length+1-zoomLvl+scrollLvl]);
 		svg.selectAll('g.x.axis')
 			.call(xAxis);

@@ -2,6 +2,7 @@ var Stats = (function() {
 	var self = {};
 
 	self.resets = 0;
+	self.ticks = 0;
 	
 	self.render = function() {
 		_(self)
